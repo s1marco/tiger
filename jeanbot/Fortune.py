@@ -14,6 +14,8 @@ LINK_SITE = 'https://lf-egito.com/?id=526959639'
 
 bot = telebot.TeleBot(api_key)
 
+
+
 while True:
     try:
         tz = timezone('America/Sao_Paulo')
@@ -28,18 +30,18 @@ while True:
         numero_aleatorio2 = random.randint(1, 10)
 
         # Envie a foto (coloque BOT_TIGER.jpg na mesma pasta do script)
-        with open('BOT_TIGER.jpg', 'rb') as photo:
+        with open('BOT_TIGER.jpeg', 'rb') as photo:
             bot.send_photo(
                 chat_id=chat_id,
                 photo=photo,
                 caption=f'''
-### SINAL ENTREGUE $$$
+⚠️SINAL ENTREGUE⚠️ 
 
-!!!! QUENTE: {numero_aleatorio1} X NORMAL
+🔥 QUENTE: {numero_aleatorio1} X NORMAL
 
-!!!! QUENTE: {numero_aleatorio2} X TURBO
+🔥 QUENTE: {numero_aleatorio2} X TURBO
 
-### VÁLIDO POR 4 MIN
+⏰VÁLIDO POR 4 MIN⏰
 
 {LINK_SITE}
 ''',
@@ -50,8 +52,8 @@ while True:
 
         bot.send_message(
             chat_id=chat_id,
-            text='''### CARTA LIBERADA $$$
-# GREEEN
+            text='''💰 tempo encerrado 💰 
+procurando novo sinal...
 ''',
             parse_mode='MARKDOWN',
             disable_web_page_preview=True
